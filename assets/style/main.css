@@ -4382,7 +4382,7 @@ input[type=button].btn-block {
 .card-img-top,
 .card-img-bottom {
   flex-shrink: 0;
-  width: 100%;
+  width: 50%;
 }
 
 .card-img,
@@ -10699,4 +10699,10 @@ main {
 
 ul {
   list-style-type: none;
+}
+
+.scrollbox {
+  height: 88vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
