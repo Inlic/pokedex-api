@@ -7,6 +7,13 @@ class ApiPokemonsService {
     let res = await pokeApi.get('?limit=1050/')
     ProxyState.apiPokemons = res.data.results
   }
+
+  async setActive(name){
+    let res = await pokeApi.get('/'+name)
+    ProxyState.activePokemon = new Pokemon(res.data)
+  }
+
+
 }
 
 const apiSpellsService = new ApiPokemonsService()

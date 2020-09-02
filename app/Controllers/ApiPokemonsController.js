@@ -3,9 +3,8 @@ import apiPokemonsService from "../Services/ApiPokemonsService.js"
 
 function _drawApiPokemons(){
   let pokemons = ProxyState.apiPokemons
-  debugger
   let template = ''
-  pokemons.forEach(p => template +=`<li onclick="app.apiPokemonsController.getDetails('${p.name}')">${p.name}</li>`)
+  pokemons.forEach(p => template +=`<li onclick="app.apiPokemonsController.setActive('${p.name}')">${p.name}</li>`)
   document.getElementById('api-pokedex').innerHTML = template
 }
 
@@ -23,5 +22,12 @@ export default class ApiPokemonsController{
     }
   }
 
+  setActive(name){
+  try {
+    apiPokemonsService.setActive(name)
+  } catch (error) {
+    console.error(error)
+  }
+  }
 
 }
