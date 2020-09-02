@@ -13,7 +13,7 @@ export default class Pokemon{
     <div class="card-body">
       <img class="card-img-top" src="${this.img}">
       <h4 class="card-title">${this.name.charAt(0).toUpperCase()+this.name.slice(1)}</h4>
-      <p class="card-text">Types: ${this.types}</p>
+      <p class="card-text">Types: ${this.types} </p>
       <p class="card-text">weight: ${this.weight}</p>
       <p class="card-text">height: ${this.height}</p>
       ${this.Button}
