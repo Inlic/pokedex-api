@@ -14,7 +14,7 @@ function _drawActivePokemon(){
 function _drawMyPokemon(){
   let pokemons = ProxyState.myPokemons
   let template = ''
-  pokemons.forEach(p => template += `<li onclick="app.myPokemonsController.setActive('${p.name}')">${p.name}</li>`)
+  pokemons.forEach(p => template += `<li onclick="app.myPokemonsController.setActive('${p.name.charAt(0).toUpperCase()+p.name.slice(1)}')">${p.name.charAt(0).toUpperCase()+p.name.slice(1)}</li>`)
   document.getElementById('my-pokedex').innerHTML = template
 }
 
@@ -31,8 +31,8 @@ export default class MyPokemonsController{
       console.error(error)
     }
   }
-  setActive(id){
-    myPokemonsService.setActive(id)
+  setActive(name){
+    myPokemonsService.setActive(name.toLowerCase())
   }
 
   addPokemon(){

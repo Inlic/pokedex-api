@@ -3,7 +3,7 @@ export default class Pokemon{
     this.id = _id
     this.name = name
     this.types = types
-    this.img = img || (sprites.front_shiny || "https://pokemon-overdose.com/wp-content/uploads/132-640x640.png")
+    this.img = img || (sprites.front_default || "https://pokemon-overdose.com/wp-content/uploads/132-640x640.png")
     this.weight = weight
     this.height = height
   }
