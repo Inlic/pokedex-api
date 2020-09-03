@@ -11,6 +11,7 @@ function _drawApiPokemons(){
 export default class ApiPokemonsController{
   constructor(){
     ProxyState.on('apiPokemons',_drawApiPokemons)
+    //NOTE function below to check what we got from the api so we can utilize it
   this.getAllApiPokemons()
   }
 
